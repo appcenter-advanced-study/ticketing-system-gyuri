@@ -16,6 +16,9 @@ build/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
+/Documents/
+*.pdf
+
 
 ### IntelliJ IDEA ###
 .idea
