@@ -20,4 +20,12 @@ public class TicketStock extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "ticket_id", nullable = false)
     private Ticket ticket;
+
+    // 티켓 수량 감소
+    public void decreaseQuantity() throws RuntimeException {
+        if (this.quantity <= 0) {
+            throw new RuntimeException("티켓 잔여 수량 없음");
+        }
+        this.quantity--;
+    }
 }

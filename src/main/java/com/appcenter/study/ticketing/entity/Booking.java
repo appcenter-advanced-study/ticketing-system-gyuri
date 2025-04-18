@@ -9,11 +9,11 @@ import lombok.*;
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Table(name = "reservation")
-public class Reservation extends BaseEntity {
+@Table(name = "booking")
+public class Booking extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long reservationId;
+    private Long bookingId;
 
     private String username;
 
