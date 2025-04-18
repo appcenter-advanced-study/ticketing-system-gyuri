@@ -1,6 +1,5 @@
-package com.appcenter.study.ticketing.ticket;
+package com.appcenter.study.ticketing.domain.ticket;
 
-import com.appcenter.study.ticketing.entity.Ticket;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TicketRepository extends JpaRepository<Ticket, Long> {

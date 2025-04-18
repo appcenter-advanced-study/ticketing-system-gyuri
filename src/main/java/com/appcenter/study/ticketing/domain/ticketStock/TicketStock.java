@@ -1,6 +1,7 @@
-package com.appcenter.study.ticketing.entity;
+package com.appcenter.study.ticketing.domain.ticketStock;
 
 import com.appcenter.study.ticketing.common.BaseEntity;
+import com.appcenter.study.ticketing.domain.ticket.Ticket;
 import jakarta.persistence.*;
 import lombok.*;
 

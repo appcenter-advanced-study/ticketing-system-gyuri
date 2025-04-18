@@ -1,6 +1,6 @@
-package com.appcenter.study.ticketing.booking;
+package com.appcenter.study.ticketing.domain.booking;
 
-import com.appcenter.study.ticketing.booking.dto.request.CreateBookingRequest;
+import com.appcenter.study.ticketing.domain.booking.dto.request.CreateBookingRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

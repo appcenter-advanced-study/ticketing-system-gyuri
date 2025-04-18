@@ -1,6 +1,6 @@
-package com.appcenter.study.ticketing.booking.dto.response;
+package com.appcenter.study.ticketing.domain.booking.dto.response;
 
-import com.appcenter.study.ticketing.entity.Ticket;
+import com.appcenter.study.ticketing.domain.ticket.Ticket;
 import lombok.*;
 
 @Getter

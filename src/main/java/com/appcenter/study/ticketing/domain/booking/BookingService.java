@@ -1,14 +1,13 @@
-package com.appcenter.study.ticketing.booking;
+package com.appcenter.study.ticketing.domain.booking;
 
-import com.appcenter.study.ticketing.booking.dto.response.CreateBookingResponse;
+import com.appcenter.study.ticketing.domain.booking.dto.response.CreateBookingResponse;
 import com.appcenter.study.ticketing.common.response.ApiResponse;
 import com.appcenter.study.ticketing.common.response.resEnum.SuccessCode;
-import com.appcenter.study.ticketing.booking.dto.request.CreateBookingRequest;
-import com.appcenter.study.ticketing.entity.Booking;
-import com.appcenter.study.ticketing.entity.TicketStock;
-import com.appcenter.study.ticketing.ticket.TicketRepository;
-import com.appcenter.study.ticketing.entity.Ticket;
-import com.appcenter.study.ticketing.ticketStock.TicketStockRepository;
+import com.appcenter.study.ticketing.domain.booking.dto.request.CreateBookingRequest;
+import com.appcenter.study.ticketing.domain.ticketStock.TicketStock;
+import com.appcenter.study.ticketing.domain.ticket.TicketRepository;
+import com.appcenter.study.ticketing.domain.ticket.Ticket;
+import com.appcenter.study.ticketing.domain.ticketStock.TicketStockRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

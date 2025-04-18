@@ -1,4 +1,4 @@
-package com.appcenter.study.ticketing.booking.dto.request;
+package com.appcenter.study.ticketing.domain.booking.dto.request;
 
 import lombok.*;
 

@@ -1,6 +1,5 @@
-package com.appcenter.study.ticketing.booking;
+package com.appcenter.study.ticketing.domain.booking;
 
-import com.appcenter.study.ticketing.entity.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BookingRepository extends JpaRepository<Booking, Long> {
