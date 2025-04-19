@@ -15,5 +15,5 @@ public class Ticket extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ticketId;
 
-    private String name;
+    private String name; // 공연 이름
 }
