@@ -29,7 +29,10 @@ public class BookingService {
         Ticket ticket = ticketRepository.findById(request.getTicketId()).orElseThrow(() -> new RuntimeException("티켓 없음"));
 
         // 2. 티켓 수량 변경 (1개 감소)
-        TicketStock ticketStock = ticketStockRepository.findByTicket(ticket);
+//        TicketStock ticketStock = ticketStockRepository.findByTicket(ticket);
+        // 비관적 락
+        TicketStock ticketStock = ticketStockRepository.findByTicketIdForUpdate(ticket.getTicketId())
+                .orElseThrow(() -> new RuntimeException("티켓 재고 없음"));
         ticketStock.decreaseQuantity();
 
         // 3. 예약 정보 저장
