@@ -51,4 +51,27 @@ public class BookingService {
 
         return ApiResponse.SUCCESS(SuccessCode.CREATE_BOOKING, dto);
     }
+
+    // 티켓 예매 요청 (kafka)
+    @Transactional
+    public void purchaseTicket(Long ticketId, String username) {
+        // 1. 티켓 조회
+        Ticket ticket = ticketRepository.findById(ticketId)
+                .orElseThrow(() -> new RuntimeException("티켓 없음"));
+
+        // 2. 티켓 재고 조회 + 감소
+        TicketStock ticketStock = ticketStockRepository.findByTicketIdForUpdate(ticket.getTicketId())
+                .orElseThrow(() -> new RuntimeException("티켓 재고 없음"));
+
+        ticketStock.decreaseQuantity();
+
+        // 3. 예약 저장
+        Booking booking = Booking.builder()
+                .username(username)
+                .ticket(ticket)
+                .build();
+        bookingRepository.save(booking);
+
+        log.info("[Kafka] 예매 성공: ticketId={}, username={}", ticketId, username);
+    }
 }
