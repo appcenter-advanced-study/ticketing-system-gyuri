@@ -64,6 +64,7 @@ public class BookingService {
                 .orElseThrow(() -> new RuntimeException("티켓 재고 없음"));
 
         ticketStock.decreaseQuantity();
+        log.info("[BookingService] ➖ 재고 감소 완료");
 
         // 3. 예약 저장
         Booking booking = Booking.builder()
